@@ -4,13 +4,13 @@ from todos.models import Todo
 
 
 class TodoSerializer(serializers.HyperlinkedModelSerializer):
-    user = serializers.ReadOnlyField(source='user.username')
+    user = serializers.CharField(read_only=True, source='user.username')
 
     class Meta:
-        model = Deck
+        model = Todo
         fields = ('url', 'id', 'created', 'name', 'user')
         extra_kwargs = {
             'url': {
-                'view_name': todos: todo-detail',
+                'view_name': 'todos:todo-detail',
             }
         }

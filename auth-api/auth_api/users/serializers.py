@@ -4,7 +4,11 @@ from users.models import User
 
 
 class UserSerializer(serializers.HyperlinkedModelSerializer):
-    todos = serializers.HyperlinkedRelatedField(many=True, view_name='todos:todo-detail')
+    todos = serializers.HyperlinkedRelatedField(
+        many=True,
+        view_name='todos:todo-detail',
+        read_only=True
+    )
     password = serializers.CharField(write_only=True)
 
     def create(self, validated_data):

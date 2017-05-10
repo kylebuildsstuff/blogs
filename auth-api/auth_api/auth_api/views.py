@@ -8,8 +8,8 @@ def api_root(request, format=None):
     return Response({
        'users': reverse('users:user-list', request=request, format=format),
        'todos': reverse('todos:todo-list', request=request, format=format),
-
-       'verify': reverse('auth:verify', request=request),
-       'refresh': reverse('auth:refresh', request=request),
-       'token': reverse('auth:token', request=request),
     })
+
+    #    'verify': reverse('auth:verify', request=request),
+    #    'refresh': reverse('auth:refresh', request=request),
+    #    'token': reverse('auth:token', request=request),
