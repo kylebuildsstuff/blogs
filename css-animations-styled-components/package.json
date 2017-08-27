@@ -9,12 +9,13 @@
     "styled-components": "^2.0.0"
   },
   "devDependencies": {
+    "cross-env": "^5.0.5",
     "react-scripts": "1.0.7"
   },
   "scripts": {
-    "start": "NODE_PATH=src/ react-scripts start",
-    "build": "NODE_PATH=src/ react-scripts build",
-    "test": "NODE_PATH=src/ react-scripts test --env=jsdom",
-    "eject": "NODE_PATH=src/ react-scripts eject"
+    "start": "cross-env NODE_PATH=src/ react-scripts start",
+    "build": "cross-env NODE_PATH=src/ react-scripts build",
+    "test": "cross-env NODE_PATH=src/ react-scripts test --env=jsdom",
+    "eject": "cross-env NODE_PATH=src/ react-scripts eject"
   }
 }
